@@ -42,7 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Arduino Helper4"
+                android:text="Arduino Helper5"
                 android:id="@+id/textView6"
                 android:textSize="33dp"
                 android:textStyle="bold" />
