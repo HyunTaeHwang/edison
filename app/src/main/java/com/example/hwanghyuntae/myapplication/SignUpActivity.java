@@ -25,11 +25,13 @@ import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.ExecutionException;
 
+
 public class SignUpActivity extends AppCompatActivity {
     private ImageView mLeft,mSignUp,mPhotoImageView;
     private TextView mName,mEmail,mPassword, mConfirmText,mSchoolText, mPositionText,mImagepath;
     private Button mGetcode, mConfirm,mButton;
     private ImageButton mImageButton,mPassButton;
+
 
     private static final String TEMP_PHOTO_FILE = "temp.jpg";       // 임시 저장파일
     private static final int REQ_CODE_PICK_IMAGE = 0;
@@ -136,7 +138,6 @@ public class SignUpActivity extends AppCompatActivity {
                             temp = null;
                             try {
 
-
                                 temp = backgroundWorker.execute(type, mEmail.getText().toString(), mPassword.getText().toString(),mName.getText().toString(),mSchoolText.getText().toString(),mPositionText.getText().toString(),mImagepath.getText().toString()).get();
                                 Toast toast = Toast.makeText(getApplicationContext(),temp,Toast.LENGTH_SHORT);
                                 toast.show();
@@ -221,20 +222,23 @@ public class SignUpActivity extends AppCompatActivity {
                 case REQ_CODE_PICK_IMAGE:
                     if (resultCode == RESULT_OK) {
                         if (imageData != null) {
+                            int i;
                             String filePath = Environment.getExternalStorageDirectory()
-                                    + "/temp.jpg";
+                                     +"/temp.jpg";
                             try {
 
                                 Bitmap image_bitmap 	= MediaStore.Images.Media.getBitmap(getContentResolver(),imageData.getData());
                                 mImageButton.setImageBitmap(image_bitmap);
+                                mImagepath.setText(filePath);
+                               // Toast.makeText(getBaseContext(),filePath.toString(),Toast.LENGTH_SHORT).show();
 
-                                Toast.makeText(getBaseContext(),mImageButton.toString(),Toast.LENGTH_SHORT).show();
+
                             } catch (IOException e) {
                                 e.printStackTrace();
                             }
 
                             System.out.println(mImageButton); // logCat으로 경로확인.
-                            mImagepath.setText(filePath);
+
                          //   Bitmap selectedImage = BitmapFactory.decodeFile(filePath);
                             // temp.jpg파일을 Bitmap으로 디코딩한다.
 

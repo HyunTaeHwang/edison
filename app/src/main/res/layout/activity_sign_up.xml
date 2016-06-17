@@ -79,7 +79,7 @@
                 android:text="Large Text"
                 android:id="@+id/Imagepath"
                 android:layout_gravity="center_horizontal"
-                android:visibility="invisible" />
+                android:visibility="visible" />
 
             <ImageButton
                 android:layout_width="50dp"
