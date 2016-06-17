@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_vertical_margin"
+    tools:context=".Bluetooth"
+    android:background="#5a5a5a">
+
+    <TextView
+        android:id="@+id/textMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/layoutInput"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textMessage" >
+
+        <ListView
+            android:layout_width="318dp"
+            android:layout_height="132dp"
+            android:id="@+id/listDevice"
+            android:visibility="visible" />
+
+        <EditText
+            android:id="@+id/editData"
+            android:layout_width="0px"
+            android:layout_weight="120"
+            android:layout_height="wrap_content"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="0px"
+        android:layout_weight="58878.56"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="Send"
+        android:layout_alignTop="@+id/layoutInput"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop"
+        android:id="@+id/Stopbutton"
+        android:layout_below="@+id/Gobutton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:onClick="Stopbuttonclick" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go"
+        android:id="@+id/Gobutton"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="Gobuttonclick" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:id="@+id/Backbutton"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/Stopbutton"
+        android:layout_centerHorizontal="true"
+        android:onClick="Backbuttonclick" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Left"
+        android:id="@+id/Leftbutton"
+        android:layout_marginEnd="30dp"
+        android:layout_alignTop="@+id/Stopbutton"
+        android:layout_toStartOf="@+id/Stopbutton"
+        android:onClick="Leftbuttonclick" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Right"
+        android:id="@+id/Rightbutton"
+        android:layout_alignTop="@+id/Stopbutton"
+        android:layout_toEndOf="@+id/Stopbutton"
+        android:layout_marginStart="30dp"
+        android:onClick="Rightbuttonclick" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LR"
+        android:id="@+id/LRButton"
+        android:onClick="LRbuttonclick"
+        android:layout_alignTop="@+id/Gobutton"
+        android:layout_alignStart="@+id/Leftbutton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RR"
+        android:id="@+id/RRbutton"
+        android:onClick="RRbuttonclick"
+        android:layout_above="@+id/Stopbutton"
+        android:layout_alignStart="@+id/Rightbutton" />
+
+</RelativeLayout>

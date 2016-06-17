@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.hwanghyuntae.myapplication.citizen_settings"
+    tools:showIn="@layout/app_bar_citizen_settings">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:background="#b79c7b">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:background="#00ffffff"
+                android:weightSum="1">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="21dp"
+                        android:layout_height="21dp"
+                        android:id="@+id/iv_left"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:adjustViewBounds="false" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="305dp"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:foregroundGravity="center_vertical|center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                        android:text="HyunT-Tae Hwang&apos;s Settings"
+                        android:id="@+id/textView"
+                        android:textColor="#8bebebeb"
+                        android:textStyle="normal"
+                        android:textSize="19dp"
+                        android:layout_gravity="center" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:id="@+id/imageView11"
+                        android:background="@drawable/check"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_marginRight="10dp" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <ImageButton
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/imageButton"
+                android:background="@drawable/hwang"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="334dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:layout_width="21dp"
+                    android:layout_height="21dp"
+                    android:id="@+id/imageView4"
+                    android:background="@drawable/usergray"
+                    android:layout_marginRight="16dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="Hyun-Tae Hwang"
+                    android:ems="10"
+                    android:id="@+id/editText"
+                    android:textColor="#c6000000"
+                    android:layout_marginRight="10dp"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp" >
+
+                <ImageView
+                    android:layout_width="21dp"
+                    android:layout_height="21dp"
+                    android:id="@+id/imageView5"
+                    android:background="@drawable/mail"
+                    android:layout_marginRight="16dp" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:text="hthwang@yonsei.ac.kr"
+                    android:ems="10"
+                    android:id="@+id/editText2"
+                    android:textColor="#c6000000"
+                    android:layout_marginRight="10dp"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp" >
+
+                <ImageView
+                    android:layout_width="21dp"
+                    android:layout_height="21dp"
+                    android:id="@+id/imageView6"
+                    android:background="@drawable/pwgray"
+                    android:layout_marginRight="16dp" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Password"
+                    android:ems="10"
+                    android:id="@+id/editText3"
+                    android:textColor="#c6000000"
+                    android:layout_marginRight="10dp"
+                    android:inputType="textPassword"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp" >
+
+                <ImageView
+                    android:layout_width="21dp"
+                    android:layout_height="21dp"
+                    android:id="@+id/imageView7"
+                    android:background="@drawable/present"
+                    android:layout_marginRight="16dp" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="February 19, 1993"
+                    android:ems="10"
+                    android:id="@+id/editText4"
+                    android:textColor="#c6000000"
+                    android:layout_marginRight="10dp"
+                    android:inputType="date"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp" >
+
+                <ImageView
+                    android:layout_width="21dp"
+                    android:layout_height="21dp"
+                    android:id="@+id/imageView8"
+                    android:background="@drawable/gender"
+                    android:layout_marginRight="16dp" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:ems="10"
+                    android:id="@+id/editText5"
+                    android:textColor="#c6000000"
+                    android:layout_marginRight="10dp"
+                    android:inputType="date"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="53dp"
+                android:layout_height="53dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/fab_margin"
+                android:src="@drawable/signout_white"
+                app:backgroundTint="#b79c7b" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#00ffffff"
+        app:popupTheme="@style/PopupOverlay" />
+
+
+</RelativeLayout>
