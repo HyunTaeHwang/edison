@@ -14,6 +14,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageButton;
+import android.widget.Toast;
+
+import java.util.concurrent.ExecutionException;
 
 public class citizen_main extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -76,6 +79,7 @@ public class citizen_main extends AppCompatActivity
         } else if (id == R.id.nav_presi_time) {
 
         } else if (id == R.id.nav_settings) {
+
             startActivity(new Intent(citizen_main.this, citizen_settings.class));
 
         } else if (id == R.id.nav_surveys) {
